@@ -17,6 +17,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<?php 
+$fonturi = get_template_directory_uri() . '/assets/fonts/HLT.ttf';
+
+
+?>
+	<style type="text/css">
+@font-face {
+    font-family: "HLT";
+    src: url(<?php echo $fonturi;?>) format("truetype");
+}
+ 
+.home-container {
+	background: rgba(239, 233, 233, 0.5); 
+
+}
+
+.background-image {
+background: url('<?php echo get_template_directory_uri() . '/assets/img/bg.png'; ?>');
+background-size: cover;
+
+}
+
+
+</style>
+
 	<?php wp_head(); ?>
 </head>
 
@@ -25,34 +50,22 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'conceito-intuitivo' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$conceito_intuitivo_description = get_bloginfo( 'description', 'display' );
-			if ( $conceito_intuitivo_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $conceito_intuitivo_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'conceito-intuitivo' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="header-container">
+			<div class="header-logo-container">
+				<a href="#"><img src="<?php echo get_template_directory_uri() . '/assets/img/Logo.png';   ?>"></a>
+			</div>
+			<div class="menu-container">
+				<ul>
+					<li><a href="#">Projectos de Arquitectura</a></li>
+					<li><a href="#">Gestão & Fiscalização</a></li>
+					<li><a href="#">Levantamentos</a></li>
+					<li><a href="#">Consultadoria</a></li>
+					<li><a href="#">Contactos</a></li>
+				</ul>
+			</div>
+		</div>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

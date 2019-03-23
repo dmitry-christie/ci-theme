@@ -14,46 +14,118 @@
 
 get_header();
 ?>
+<div class="background-image">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="home-container">
+	<div class="header-cta">
+		<h2>Somos um Gabinete de  Projectos de Arquitectura</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fugiat exercitationem odit nesciunt animi natus quidem, tempora assumenda repellat illo, voluptates est iste ut, omnis aperiam veniam vel veritatis sit? </p>
+		<a href="#" class="link-saiba-mais">
+			<div class="button-saiba-mais">
+				Saiba Mais
+			</div>
+		</a>
+	</div>
 
+	<div class="blue-container">
+		<div class="container-cta">
+			<h1>Arcitectura Residencial</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda amet sapiente, commodi autem temporibus quia vel vero itaque aperiam est atque fugit rerum? In obcaecati ipsam culpa doloribus beatae!</p>	
+			<a href="#" class="link-saiba-mais">
+			<div class="button-saiba-mais">
+				Saiba Mais
+			</div>
+		</a>	
+		</div>
+
+		<div class="destaque-container">
+			<div class="destaque1">
+				<img src="#">
+				<h4>Lorem Ipsum</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste asperiores facilis dolorem quis corrupti mollitia. Possimus fuga incidunt esse? Odit, architecto distinctio! Asperiores, natus iure. Ab illo assumenda placeat aliquam.</p>
+				<a href="#" class="link-saiba-mais">
+					<div class="button-saiba-mais">
+						Saiba Mais
+					</div>
+				</a>
+
+			</div>
+
+			<div class="destaque2">
+				<img src="#">
+				<h4>Lorem Ipsum</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste asperiores facilis dolorem quis corrupti mollitia. Possimus fuga incidunt esse? Odit, architecto distinctio! Asperiores, natus iure. Ab illo assumenda placeat aliquam.</p>
+				<a href="#" class="link-saiba-mais">
+					<div class="button-saiba-mais">
+						Saiba Mais
+					</div>
+				</a>
+
+			</div>
+
+			<div class="destaque3">
+				<img src="#">
+				<h4>Lorem Ipsum</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste asperiores facilis dolorem quis corrupti mollitia. Possimus fuga incidunt esse? Odit, architecto distinctio! Asperiores, natus iure. Ab illo assumenda placeat aliquam.</p>
+				<a href="#" class="link-saiba-mais">
+					<div class="button-saiba-mais">
+						Saiba Mais
+					</div>
+				</a>
+
+			</div>
+			
+		</div>
+		<div class="container-cta">
+			<h1>Arcitectura Residencial</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda amet sapiente, commodi autem temporibus quia vel vero itaque aperiam est atque fugit rerum? In obcaecati ipsam culpa doloribus beatae!</p>	
+			<a href="#" class="link-saiba-mais">
+				<div class="button-saiba-mais">
+					Saiba Mais
+				</div>
+			</a>	
+		</div>
+
+		<div class="container-cta">
+			<h1>Arcitectura Residencial</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda amet sapiente, commodi autem temporibus quia vel vero itaque aperiam est atque fugit rerum? In obcaecati ipsam culpa doloribus beatae!</p>	
+			<a class="link-saiba-mais" ref="#">
+			<div class="button-saiba-mais">
+				Saiba Mais
+			</div>
+		</a>	
+		</div>
+
+		<div class="footer">
+			<div class="facebook">
+				Facebook
+			</div>
+
+			<div class="insta">
+				Insta
+			</div>
+
+			<div class="twitter">
+				Twitter
+			</div>
+		</a>
+		
+		</div>
+		<div class="copyright">
 		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
 get_footer();
+?>
+		</div>
+
+	</div>
+</div>
+
+
+	
+
+
+
+
+</div>
+<?php
+
